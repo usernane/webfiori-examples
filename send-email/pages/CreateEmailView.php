@@ -43,7 +43,7 @@ class CreateEmailView{
     public function __construct() {
         //load UI template components (JS, CSS and others)
         //it is optional. to use a theme but recomended
-        Page::theme('WebFiori Theme');
+        //Page::theme('WebFiori Theme');
         Page::document()->getHeadNode()->addJs('res/send-email.js');
         Page::document()->getHeadNode()->addCSS('res/send-email.css');
         
