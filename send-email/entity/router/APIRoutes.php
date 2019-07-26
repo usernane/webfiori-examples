@@ -41,6 +41,6 @@ class APIRoutes {
      * @since 1.0
      */
     public static function create() {
-        Router::api('/email-apis/{action}', '/ExampleAPI.php');
+        Router::api('/email-apis/{action}', '/SendEmailAPI.php');
     }
 }
