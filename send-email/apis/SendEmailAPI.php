@@ -4,6 +4,8 @@ use webfiori\entity\ExtendedWebAPI;
 use restEasy\APIAction;
 use restEasy\RequestParameter;
 use webfiori\entity\mail\EmailMessage;
+use webfiori\entity\mail\SMTPAccount;
+use webfiori\WebFiori;
 /**
  * Description of SendAPI
  *
