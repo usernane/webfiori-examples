@@ -33,6 +33,7 @@ class VueTheme extends Theme{
 
     public function getHeadNode() {
         $hNode = new HeadNode();
+        //Load Vue.js
         $hNode->addJs('https://cdn.jsdelivr.net/npm/vue');
         return $hNode;
     }
