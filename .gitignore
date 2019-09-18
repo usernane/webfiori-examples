@@ -68,12 +68,10 @@ basic-blog/entity/restEasy/APIFilter.php
 basic-blog/entity/restEasy/LICENSE
 basic-blog/entity/restEasy/RequestParameter.php
 basic-blog/entity/restEasy/WebAPI.php
-basic-blog/entity/router/APIRoutes.php
 basic-blog/entity/router/ClosureRoutes.php
 basic-blog/entity/router/OtherRoutes.php
 basic-blog/entity/router/Router.php
 basic-blog/entity/router/RouterUri.php
-basic-blog/entity/router/ViewRoutes.php
 basic-blog/entity/SessionManager.php
 basic-blog/entity/Theme.php
 basic-blog/entity/Uploader.php
