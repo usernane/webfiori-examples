@@ -65,8 +65,8 @@ class PostAPIs extends ExtendedWebAPI{
         if($result == MySQLQuery::QUERY_ERR){
             $errDetails = $this->blogPostController->getDBErrDetails();
             $j = new JsonX();
-            $j->add('error-details', $errDetails);
-            $this->send('application/json', $j);
+            $j->add('message', $errDetails['error-message']);
+            $this->send('application/json', $j,404);
         }
         else{
             $this->sendResponse('Blog Post Successfully Added.');
@@ -93,4 +93,8 @@ class PostAPIs extends ExtendedWebAPI{
     private function removePost(){
         
     }
+}
+if(defined('API_CALL') && API_CALL){
+    $apis = new PostAPIs();
+    $apis->process();
 }

@@ -81,7 +81,6 @@ basic-blog/functions/BasicMailFunctions.php
 basic-blog/functions/Functions.php
 basic-blog/functions/SystemFunctions.php
 basic-blog/functions/WebsiteFunctions.php
-basic-blog/ini/InitAutoLoad.php
 basic-blog/ini/InitCron.php
 basic-blog/ini/InitPrivileges.php
 basic-blog/pages/default.html

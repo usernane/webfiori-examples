@@ -22,44 +22,29 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-namespace webfiori\entity\router;
+namespace webfiori\ini;
 if(!defined('ROOT_DIR')){
     header("HTTP/1.1 404 Not Found");
     die('<!DOCTYPE html><html><head><title>Not Found</title></head><body>'
     . '<h1>404 - Not Found</h1><hr><p>The requested resource was not found on the server.</p></body></html>');
 }
+use webfiori\entity\AutoLoader;
 /**
- * A class that only has one method to initiate some of system routes.
- * The class is meant to only initiate the routes which uses the method 
- * Router::view().
+ * A class that has one method to initialize user-defined autoload directories.
+ *
  * @author Ibrahim
  * @version 1.0
  */
-class ViewRoutes {
+class InitAutoLoad {
     /**
-     * Create all views routes. Include your own here.
-     * @since 1.0
+     * Add user-defined directories to the set of directories at which the framework 
+     * will search for classes.
+     * The developer can use the method AutoLoader::newSearchFolder() to add 
+     * new search directory.
      */
-    public static function create(){
-        Router::view([
-            'path'=>'', 
-            'route-to'=>'AddPostView.php'
-        ]);
-        Router::view([
-            'path'=>'new-blog-post', 
-            'route-to'=>'AddPostView.php'
-        ]);
-        Router::view([
-            'path'=>'edit-blog-post/{post-canonical}', 
-            'route-to'=>'UpdatePostView.php'
-        ]);
-        Router::view([
-            'path'=>'all-posts', 
-            'route-to'=>'PostsListView.php'
-        ]);
-        Router::view([
-            'path'=>'{canonical}',
-            'route-to'=>'PostView.php'
-        ]);
+    public static function init() {
+        $AU = AutoLoader::get();
+        $AU->newSearchFolder('system-files');
+        //$AU->newSearchFolder('my-entities', FALSE);
     }
 }
