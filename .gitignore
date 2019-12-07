@@ -119,3 +119,7 @@ basic-blog/themes/webfiori/WebFioriTheme.php
 basic-blog/WebFiori.php
 nbproject/project.properties
 nbproject/project.xml
+/colors/apis/
+/colors/conf/
+/colors/entity/
+/colors/themes/
